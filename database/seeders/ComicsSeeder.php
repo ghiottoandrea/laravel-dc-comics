@@ -20,7 +20,7 @@ class ComicsSeeder extends Seeder
             $newComic->title = $comic['title'];
             $newComic->thumb = $comic['thumb'];
             $newComic->description = $comic['description'];
-            $newComic->price = str_replace('$', '', $comic['price']);;
+            $newComic->price = str_replace('$', '', $comic['price']);
             $newComic->series = $comic['series'];
             $newComic->type = $comic['type'];
             $newComic->sale_date = $comic['sale_date'];

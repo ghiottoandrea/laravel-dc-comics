@@ -15,12 +15,20 @@
 
 </head>
 
-<body>
+<body class="comics_page">
 
     <div class="container">
         <div class="row">
 
-        
+        @foreach ($comics as $comic)
+            <div class="col-2">
+
+                <img class="w-100 mt-3" src="{{$comic->thumb}}" alt="">
+                <span>{{$comic->title}}</span>
+
+            </div>
+            
+        @endforeach
 
         </div>
     </div>
