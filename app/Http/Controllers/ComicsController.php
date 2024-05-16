@@ -46,7 +46,7 @@ class ComicsController extends Controller
         $comics->price = str_replace('$', '', $data['price']);
         $comics->save();
 
-        return to_route('pastas.index');
+        return to_route('comics.index');
     }
 
     /**

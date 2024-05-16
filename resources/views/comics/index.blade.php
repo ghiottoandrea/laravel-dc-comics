@@ -20,17 +20,78 @@
     <div class="container">
         <div class="row">
 
-        @foreach ($comics as $comic)
+            <div class="d-flex align-items-center text-center">
+
+            <div class="col-1">
+                Id
+            </div>
+
+            <div class="col-2">
+                Copertina
+            </div>
+
+            <div class="col-3">
+                Titolo
+            </div>
+
+            <div class="col-2">
+                Serie
+            </div>
+
+            <div class="col-1">
+                Tipo
+            </div>
+
+            <div class="col-1">
+                Prezzo
+            </div>
+
             <div class="col-2">
 
-                <img class="w-100 mt-3" src="{{$comic->thumb}}" alt="">
-                <span>{{$comic->title}}</span>
-
             </div>
-            
-        @endforeach
 
         </div>
+        <hr>
+
+
+        @foreach ($comics as $comic)
+
+        <div class="d-flex align-items-center text-center">
+
+            <div class="col-1">
+                {{$comic->id}}
+            </div>
+
+            <div class="col-2">
+                <img class="w-50 m-2" src="{{$comic->thumb}}" alt="">
+            </div>
+
+            <div class="col-3">
+                {{$comic->title}}
+            </div>
+
+            <div class="col-2">
+                {{$comic->series}}
+            </div>
+
+            <div class="col-1">
+                {{$comic->type}}
+            </div>
+
+            <div class="col-1">
+                {{$comic->price}}
+            </div>
+
+            <div class="col-2">
+                pulsanti
+            </div>
+
+        </div>
+        <hr>
+        @endforeach
+
+    </div>
+
     </div>
 
 </body>
