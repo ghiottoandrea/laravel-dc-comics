@@ -14,19 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('comics.index');
+});
 
-/**
- * 
- * GET|HEAD        comics .......................................... comics.index › ComicsController@index  
-  POST            comics .......................................... comics.store › ComicsController@store  
-  GET|HEAD        comics/create ................................. comics.create › ComicsController@create  
-  GET|HEAD        comics/{comic} .................................... comics.show › ComicsController@show  
-  PUT|PATCH       comics/{comic} ................................ comics.update › ComicsController@update  
-  DELETE          comics/{comic} .............................. comics.destroy › ComicsController@destroy  
-  GET|HEAD        comics/{comic}/edit ............................... comics.edit › ComicsController@edit 
 
- */
-Route::resource('/', ComicsController::class);
+Route::resource('comics', ComicsController::class);
